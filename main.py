@@ -31,7 +31,7 @@ async def on_ready():
 intents = discord.Intents.default()
 intents.members = True
 
-BOT_TOKEN = os.environ['discordkey']
+BOT_TOKEN = 'MTQ0Njg0ODE2MzcyNTE4MDk1OA.GImtd2.UD6hSh7bloLQbI0JcUmDDzCCAnGo7W0jlyAHUw'
 
 # ==================== Verify Setup ====================#
 
