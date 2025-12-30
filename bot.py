@@ -11,6 +11,7 @@ import asyncio
 from discord import ui, app_commands, Interaction
 from discord.ui import Button, View, Modal, TextInput
 from discord.ext import tasks
+import webserver
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -30,7 +31,7 @@ async def on_ready():
 intents = discord.Intents.default()
 intents.members = True
 
-BOT_TOKEN = "MTQ0Njg0ODE2MzcyNTE4MDk1OA.GImtd2.UD6hSh7bloLQbI0JcUmDDzCCAnGo7W0jlyAHUw"
+BOT_TOKEN = os.environ['discordkey']
 
 # ==================== Verify Setup ====================#
 
@@ -1171,5 +1172,6 @@ async def on_ready():
 # -----------------------
 if __name__ == "__main__":
 #=================================================#
+        webserver.keep_alive()
         bot.run(BOT_TOKEN)
 
